@@ -8,10 +8,15 @@ for i in range(0,2):
     speletajs += random.randint(1,11)
     dilers += random.randint(1,11)
     
+if dilers < 16:
+    dilers += random.randint(1,11)
+    
 if dilers == 21:
     print('Dilers uzvareja!')
 elif dilers > 21:
     print('Dilers zaudeja')
+    
+print(dilers)
     
 while turpinat:
     user = input('Panemt vel vienu karte?[Y/N]')
