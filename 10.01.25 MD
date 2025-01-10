@@ -1,0 +1,7 @@
+s0 = []
+for i in range ( 5 ):
+    x = int(input("Enter x:"))
+    s0.append(x)
+s0.pop()
+s0.pop(0)
+print(s0)
