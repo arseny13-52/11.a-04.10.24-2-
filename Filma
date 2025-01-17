@@ -1,0 +1,9 @@
+filma = {
+    "filma nosaukums":"Kingsman: Slepenais dienests",
+    "žanrs": "spiegu films",
+    "aktieri": "Kolins Fērts""Semjuels Džeksons""Marks Strongs" 
+
+}
+filma["IMBD"] = 7.7
+filma["rezisors"] = "Metjū Vons"
+print(filma)
