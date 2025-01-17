@@ -1,0 +1,19 @@
+vertejumi = {
+    10: "izcili",
+    9: "teicami",
+    8: "ļoti labi",
+    7: "labi",
+    6: "gandriz labi",
+    5:"viduveji",
+    4:"gandriz viduveji",
+    3:"nesekmigi",
+    2:"nesekmigi",
+    1:"nesekmigi",
+}
+#lietotaja ievad
+x= int(input("ievadi balles no 1 lidz 10: "))
+#parbaude
+if 1<=x<=10: 
+    print(f"Vertejums {vertejumi[x]}")
+else:
+    print("Ievaditais skaitlis nav korekts")
