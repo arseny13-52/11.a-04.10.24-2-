@@ -1,0 +1,39 @@
+class Person:
+    def __init__(self, name, surname, age, height):
+        self.name = name
+        self.surname = surname
+        self.age = age
+        self.height = height
+    
+    def getName(self) -> str:
+        return self.name
+    
+    def getSurname(self) -> str:
+        return self.surname
+    
+    def getAge(self) -> str:
+        return self.age
+    
+    def getHeight(self) -> float:
+        return self.height
+    
+        
+    def greet(self):
+        print(f"Hello {self.name}")
+        print(f"I am {self.age} y.o.")
+        
+    def __str__(self):
+        return f"{self.name} {self.surname} {self.age} {self.height}"
+    
+person1 = Person("Durik", "Golubj", 28 , 180)
+person2 = Person("Alekss", "Šokoladka", 12 , 100)
+person3 = Person("Senja", "Klasnij", 27 , 190)
+
+personList = [person1, person2, person3]
+
+for i in range(0, len(personList)):
+    if personList[i].getAge() >= 18:
+        print("Atļauts ienākts")
+        print(f"Sveiki, {personList[i].getName()}!")
+    else:
+        print("Nav atlauts ienākt")
