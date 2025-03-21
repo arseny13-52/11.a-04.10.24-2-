@@ -1,0 +1,31 @@
+from uzd1 import Block
+
+class Inventars: 
+    
+    def __init__(self, size):
+        self.inventars = []
+        self.MaxIzmers = size
+        
+    def pievienotBloku(self, Block):
+        if( len(self.inventars)<= self.MaxIzmers):
+            self.inventars.append(Block)
+        else:
+            print('Error!')
+            
+    def izvaditinventaru(self):
+        for item in self.inventars:
+            print(item)
+            
+    def __str__(self):
+        return f'{self.inventars}'
+    
+rinda1 = Inventars(9)
+
+block1 = Block("block of Diamond", "Diamond.png", True)
+block2 = Block("block of Gold", "Gold.png", True)
+block3 = Block("block of Grass", "Grass.png", True)
+
+rinda1.pievienotBloku(block1)
+rinda1.pievienotBloku(block2)
+rinda1.pievienotBloku(block3)
+rinda1.izvaditinventaru()
