@@ -1,0 +1,31 @@
+class Darbinieks:
+    darbinieku_skaits = 0
+
+    def __init__(self, vards, uzvards, alga):
+        self.vards = vards
+        self.uzvards = uzvards
+        self.alga = alga
+        Darbinieks.darbinieku_skaits += 1
+        self.ID = Darbinieks.darbinieku_skaits
+
+    def increase_salary(self, procenti):
+        self.alga += self.alga * (procenti / 100)
+
+    def decrease_salary(self, procenti):
+        self.alga -= self.alga * (procenti / 100)
+
+    def __str__(self):
+        return f"{self.ID}-{self.vards}-{self.uzvards}"
+
+if __name__ == "__main__":
+    darbinieks1 = Darbinieks("Dorians", "Zelejnij", 1000)
+    darbinieks2 = Darbinieks("Senja", "Sportik", 1200)
+
+    print(darbinieks1)
+    print(darbinieks2)
+
+    darbinieks1.increase_salary(10)
+    darbinieks2.decrease_salary(5)
+
+    print(f"Jaunā alga Dorians: {darbinieks1.alga}")
+    print(f"Jaunā alga Senja: {darbinieks2.alga}")
